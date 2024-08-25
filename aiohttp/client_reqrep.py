@@ -204,7 +204,7 @@ class ClientRequest:
         cookies: Optional[LooseCookies] = None,
         auth: Optional[BasicAuth] = None,
         version: http.HttpVersion = http.HttpVersion11,
-        compress: Optional[str] = None,
+        compress: Union[bool, str, None] = None,
         chunked: Optional[bool] = None,
         expect100: bool = False,
         loop: asyncio.AbstractEventLoop,
